@@ -31,6 +31,26 @@ func printMealOptional() {
     print("Happiness:\t\(meal.happiness!)\n")
 }
 
+// IMPRIME A CLASSE DE ATRIBUTOS OPCIONAIS DE FORMA SEGURA
+func printMealSecure() {
+    let meal:MealOptional = MealOptional()
+    meal.happiness = Optional(4)
+    meal.name = Optional("Sundubu")
+    
+    if let n = meal.name {
+        print("Name:\t\t\(n.uppercased())")
+    }
+    
+    if let h = meal.happiness {
+        print("Happiness:\t\(h)\n")
+    }
+}
+
 // EXECUÇÃO DE FUNÇÕES
 printMealInicialized()
 printMealOptional()
+printMealSecure()
+
+// CLASSE/MÉTODO COM RETORNO OPCIONAL
+let age:Int? = Int("5")
+
